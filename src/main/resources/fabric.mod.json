@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "lexis",
+	"version": "1.0.0",
+	"name": "Lexis Client",
+	"description": "Eğitsel amaçlı 1.21.4 yardımcı modu.",
+	"entrypoints": {
+		"client": [
+			"com.lexis.LexisMod"
+		]
+	},
+	"mixins": [
+		"lexismod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "1.21.4",
+		"java": "21"
+	}
+}

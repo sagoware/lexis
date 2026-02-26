@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.lexis.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"KeyboardMixin",
+		"ExampleMixin",
+		"XRayMixin",
+		"ReachMixin",
+		"FullBrightMixin"
+
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

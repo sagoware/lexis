@@ -1,0 +1,33 @@
+// DOSYA ADI: build.gradle
+
+plugins {
+	id 'fabric-loom' version '1.9-SNAPSHOT' // 1.21.4 desteği için güncel loom
+	id 'maven-publish'
+}
+
+version = "1.0.0"
+group = "com.lexis"
+
+repositories {
+	// Kütüphanelerin indirileceği depolar
+	mavenCentral()
+}
+
+dependencies {
+	// Minecraft 1.21.4 kütüphaneleri
+	minecraft "com.mojang:minecraft:1.21.4"
+	mappings "net.fabricmc:yarn:1.21.4+build.1:v2" // Mapping'ler kodun okunmasını sağlar
+	modImplementation "net.fabricmc:fabric-loader:0.16.9"
+
+	// Fabric API (Hilenin çalışması için şart)
+	modImplementation "net.fabricmc.fabric-api:fabric-api:0.110.0+1.21.4"
+}
+
+processResources {
+	inputs.property "version", project.version
+	filteringCharset "UTF-8"
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
